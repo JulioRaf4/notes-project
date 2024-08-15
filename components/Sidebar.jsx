@@ -24,8 +24,8 @@ export default function Sidebar(props) {
     return (
         <section className="pane sidebar">
             <div className="sidebar--header">
-                <h3>Notes</h3>
-                <button className="new-note" onClick={props.newNote}>+</button>
+                <h2>Notes</h2>
+                <button className="new-note" onClick={props.newNote}>New note +</button>
             </div>
             {noteElements}
         </section>

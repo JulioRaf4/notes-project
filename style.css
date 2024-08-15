@@ -26,6 +26,8 @@ button:focus {
 .sidebar {
     width: 20%;
     height: 100vh;
+    background: rgb(203,202,210);
+    background: linear-gradient(157deg, rgba(203,202,210,1) 0%, rgba(146,146,156,1) 62%, rgba(81,88,89,1) 100%);
 }
 
 .sidebar--note {
@@ -38,23 +40,23 @@ button:focus {
     align-items: center;
 }
 
-.sidebar--header > h3 {
+.sidebar--header > h2 {
     font-size: 1.75rem;
 }
 
 .new-note {
     cursor: pointer;
-    background-color: #4A4E74;
+    background-color: #727375;
     border: none;
     color: white;
     border-radius: 3px;
     height: 30px;
-    width: 30px;
+    width: 6em;
 }
 
 .first-note {
     cursor: pointer;
-    background-color: #4A4E74;
+    background-color: #727375;
     border: none;
     color: white;
     border-radius: 3px;
@@ -92,17 +94,18 @@ button:focus {
 
 .text-snippet {
     padding-inline: 5px;
-    font-size: 0.8rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 200;
     line-height: 1.2rem;
     color: #4A4E74;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-left: 1em;
 }
 
 .selected-note {
-    background-color: #4A4E74;
+    background-color: #727375;
 }
 
 .selected-note .text-snippet {
@@ -112,7 +115,6 @@ button:focus {
 
 .gutter {
     background-color: #eee;
-
     background-repeat: no-repeat;
     background-position: 50%;
 }
@@ -136,7 +138,8 @@ button:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
+    background: rgb(203,202,210);
+    background: linear-gradient(157deg, rgba(203,202,210,1) 0%, rgba(146,146,156,1) 62%, rgba(81,88,89,1) 100%);
 }
 
 .delete-btn {
