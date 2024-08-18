@@ -1,17 +1,22 @@
-import React from "react"
+import React from "react";
 import ReactMde from "react-mde";
-import ReactDOM from "react-dom";
-import Showdown from "showdown"
+import Showdown from "showdown";
 
-export default function Editor({ currentNote, updateNote }) {
-    const [selectedTab, setSelectedTab] = React.useState("write")
+// Definir as props esperadas
+type EditorProps = {
+    currentNote: { body: string };
+    updateNote: (text: string) => void;
+};
+
+export default function Editor({ currentNote, updateNote }: EditorProps) {
+    const [selectedTab, setSelectedTab] = React.useState<"write" | "preview">("write");
 
     const converter = new Showdown.Converter({
         tables: true,
         simplifiedAutoLink: true,
         strikethrough: true,
         tasklists: true,
-    })  
+    });
 
     return (
         <section className="pane editor">
@@ -27,5 +32,5 @@ export default function Editor({ currentNote, updateNote }) {
                 heightUnits="vh"
             />
         </section>
-    )
+    );
 }
